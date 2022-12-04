@@ -44,10 +44,10 @@
     "initVersion": "6.11.0"
   },
   "lint-staged": {
-    "*": [
-      "prettier --write \"**/*.{ts,tsx,md,mdx,json}\""
+    "./src/**/*.{ts,tsx,md,mdx,json}": [
+      "prettier --write"
     ],
-    "src/**/*.{ts,tsx}": [
+    "./src/**/*.{ts,tsx}": [
       "eslint --fix"
     ]
   }
