@@ -76,7 +76,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="relative">
-        <main className="mx-auto flex min-h-[90vh] max-w-7xl items-center justify-center px-4">
+        <main className="mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4">
           <div className="text-center">
             <h1
               id={styles.hero}

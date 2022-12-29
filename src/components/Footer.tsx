@@ -3,36 +3,11 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon, ChevronUpDownIcon } from "@heroicons/react/24/solid";
+import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
 import { type HTMLAttributes } from "react";
 import useTheme from "../hooks/useTheme";
 
 const navigation = {
-  solutions: [
-    { name: "Frontend Development", href: "/frontend" },
-    { name: "Backend Development", href: "#" },
-    { name: "Web Design", href: "#" },
-    { name: "Photoshop", href: "#" },
-    { name: "SEO", href: "#" },
-  ],
-  support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "API Status", href: "#" },
-    { name: "Guides", href: "#" },
-  ],
-  company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
-  legal: [
-    { name: "Claim", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-  ],
   social: [
     {
       name: "Twitter",
@@ -101,142 +76,6 @@ export default function Footer() {
         Footer
       </h2>
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="mt-8 border-t border-gray-200 py-8 dark:border-gray-800 xl:grid xl:grid-cols-5 xl:gap-8">
-          <div className="grid grid-cols-2 gap-8 xl:col-span-4">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                  Solutions
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-600 hover:text-gray-900 dark:hover:text-gray-100"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                  Support
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-600 hover:text-gray-900 dark:hover:text-gray-100"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                  Company
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-600 hover:text-gray-900 dark:hover:text-gray-100"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                  Legal
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-600 hover:text-gray-900 dark:hover:text-gray-100"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 xl:mt-0">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-              Language &amp; Currency
-            </h3>
-            <form className="mt-4 sm:max-w-xs">
-              <fieldset className="w-full">
-                <label htmlFor="language" className="sr-only">
-                  Language
-                </label>
-                <div className="relative">
-                  <select
-                    id="language"
-                    name="language"
-                    className="block w-full appearance-none rounded-md border border-gray-300 bg-white bg-none py-2 pl-3 pr-10 text-base text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-700 dark:bg-black dark:text-gray-100 sm:text-sm"
-                    defaultValue="English"
-                  >
-                    <option>English</option>
-                    <option>French</option>
-                    <option>German</option>
-                    <option>Japanese</option>
-                    <option>Spanish</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                    <ChevronDownIcon
-                      className="h-4 w-4 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset className="mt-4 w-full">
-                <label htmlFor="currency" className="sr-only">
-                  Currency
-                </label>
-                <div className="relative">
-                  <select
-                    id="currency"
-                    name="currency"
-                    className="block w-full appearance-none rounded-md border border-gray-300 bg-white bg-none py-2 pl-3 pr-10 text-base text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-700 dark:bg-black dark:text-gray-100 sm:text-sm"
-                    defaultValue="AUD"
-                  >
-                    <option>ARS</option>
-                    <option>AUD</option>
-                    <option>CAD</option>
-                    <option>CHF</option>
-                    <option>EUR</option>
-                    <option>GBP</option>
-                    <option>JPY</option>
-                    <option>USD</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                    <ChevronDownIcon
-                      className="h-4 w-4 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-        </div>
         <div className="mt-8 flex flex-col items-center gap-4 border-t border-gray-200 pt-8 dark:border-gray-800 md:flex-row md:justify-between">
           <p className="order-3 mt-0 text-center text-base text-gray-500 md:order-1 md:text-left">
             Copyright &copy; 2022 Daniil Robnikov. All rights reserved.
