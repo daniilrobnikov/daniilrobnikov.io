@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://daniilrobnikov.vercel.app/
+
+# Sitemaps
+Sitemap: https://daniilrobnikov.vercel.app/sitemap.xml

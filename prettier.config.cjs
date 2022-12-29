@@ -16,4 +16,5 @@ module.exports = {
     require.resolve("prettier-plugin-tailwindcss"),
   ],
   pluginSearchDirs: false,
+  organizeImportsSkipDestructiveCodeActions: true,
 };

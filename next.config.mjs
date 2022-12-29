@@ -4,13 +4,11 @@
  * This is especially useful for Docker builds.
  */
 !process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
-
-// process.env.ANALYZE && 
-import withBundleAnalyzer from '@next/bundle-analyzer';
+import withBundleAnalyzer from "@next/bundle-analyzer";
 
 const bundleAnalyzer = withBundleAnalyzer({
-	enabled: process.env.ANALYZE === 'true',
-})
+  enabled: process.env.ANALYZE === "true",
+});
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -19,6 +17,9 @@ const config = {
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
+  },
+  images: {
+    domains: ["images.unsplash.com", "tailwindui.com"],
   },
 };
 
