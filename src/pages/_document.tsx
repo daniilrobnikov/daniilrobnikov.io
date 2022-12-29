@@ -41,8 +41,8 @@ export default function Document() {
           property="og:image"
           content="https://ia.media-imdb.com/images/rock.jpg"
         />
-        <meta property="og:url" content="https://daniilrobnikov.com" />
-        <link rel="canonical" href="https://daniilrobnikov.com" />
+        <meta property="og:url" content="https://daniilrobnikov.vercel.app" />
+        <link rel="canonical" href="https://daniilrobnikov.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Daniil Robnikov" />
         <Script
