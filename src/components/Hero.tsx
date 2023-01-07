@@ -1,4 +1,5 @@
 import styles from "@/styles/Hero.module.css";
+import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
 export default function Hero() {
@@ -102,22 +103,23 @@ export default function Hero() {
             </div>
             <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
               <div className="rounded-md shadow">
-                <a
+                <Link
                   href="https://github.com/daniilrobnikov"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-teal-900 px-8 py-3 text-base font-medium text-gray-50 hover:bg-teal-700 hover:text-white md:py-4 md:px-10 md:text-lg"
+                  id="from-teal-500/90 via-teal-700 to-teal-800/80"
+                  className="flex w-full items-center justify-center rounded-md bg-teal-900 bg-gradient-to-r from-teal-400/90 via-teal-600 to-teal-700/80 px-8 py-3 text-base font-medium text-white/90 hover:from-teal-500/90 hover:via-teal-700 hover:to-teal-800/80 hover:text-white dark:bg-teal-900/10 dark:from-teal-600/90 dark:via-teal-800 dark:to-teal-900/80 dark:text-white/80 dark:hover:from-teal-500/90 dark:hover:via-teal-700 dark:hover:to-teal-800/80 dark:hover:text-white/90 md:py-4 md:px-10 md:text-lg"
                 >
                   Browse works
-                </a>
+                </Link>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a
+                <Link
                   href="#contact"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-teal-600 hover:bg-gray-50 hover:text-teal-700 dark:bg-gray-900 dark:text-teal-500  dark:hover:bg-gray-800 dark:hover:text-teal-400 md:py-4 md:px-10 md:text-lg"
+                  className="flex w-full items-center justify-center rounded-md bg-white px-8 py-3 text-base font-medium text-teal-600 hover:bg-gray-50 hover:text-teal-700 dark:bg-gray-900 dark:text-teal-500  dark:hover:bg-sky-600/30 dark:hover:text-teal-400/90 md:py-4 md:px-10 md:text-lg"
                 >
                   Contact me
-                </a>
+                </Link>
               </div>
             </div>
           </div>

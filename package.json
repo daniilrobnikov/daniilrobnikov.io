@@ -9,7 +9,7 @@
     "lint": "next lint",
     "sitemap": "next-sitemap",
     "analyze": "ANALYZE=true next build",
-    "format": "prettier --write \"**/*.{js,ts,tsx,md,json}\""
+    "format": "prettier --write \"./**/*.{js,ts,tsx,md,json}\""
   },
   "dependencies": {
     "next": "latest",
@@ -49,10 +49,10 @@
     "react-wrap-balancer": "^0.3.0"
   },
   "lint-staged": {
-    "./src/**/*.{js,ts,tsx,md,json}": [
+    "src/**/*.{js,ts,tsx,md,json}": [
       "prettier --write"
     ],
-    "./src/**/*.{ts,tsx}": [
+    "src/**/*.{ts,tsx}": [
       "eslint --fix"
     ]
   },

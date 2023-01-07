@@ -13,9 +13,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "prettier",
   ],
-  root: true,
   rules: {
     "@typescript-eslint/consistent-type-imports": "warn",
   },
-  ignorePatterns: ["node_modules/", "build/", "dist/"],
 };

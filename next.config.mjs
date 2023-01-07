@@ -14,7 +14,6 @@ const bundleAnalyzer = withBundleAnalyzer({
 const config = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
     fontLoaders: [
       { loader: "@next/font/google", options: { subsets: ["latin"] } },
     ],
@@ -28,7 +27,7 @@ const config = {
   },
 
   images: {
-    domains: ["images.unsplash.com", "tailwindui.com"],
+    domains: ["images.unsplash.com"],
   },
 };
 
