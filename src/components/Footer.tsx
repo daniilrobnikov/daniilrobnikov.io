@@ -118,23 +118,23 @@ export default function Footer() {
                 className="inline-flex w-36 items-center justify-between rounded-md border border-gray-300 bg-white bg-none py-2 px-3 text-sm text-black focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-700 dark:bg-black dark:text-white"
                 onClick={() => handleClick()}
               >
-                <p className="pointer-events-none flex h-5 w-fit items-center group-[.system]/html:hidden group-[.dark]/html:hidden">
+                <p className="pointer-events-none flex h-5 w-auto items-center group-[.system]/html:hidden group-[.dark]/html:hidden">
                   <SunIcon
-                    className="mr-3 h-5 w-fit text-gray-400"
+                    className="mr-3 h-5 w-auto text-gray-400"
                     aria-hidden="true"
                   />
                   Light
                 </p>
-                <p className="pointer-events-none hidden h-5 w-fit items-center group-[.dark:not(.system)]/html:flex">
+                <p className="pointer-events-none hidden h-5 w-auto items-center group-[.dark:not(.system)]/html:flex">
                   <MoonIcon
                     aria-hidden="true"
-                    className="mr-3 h-5 w-fit text-gray-400"
+                    className="mr-3 h-5 w-auto text-gray-400"
                   />
                   Dark
                 </p>
-                <p className="pointer-events-none hidden h-5 w-fit items-center group-[.system]/html:flex">
+                <p className="pointer-events-none hidden h-5 w-auto items-center group-[.system]/html:flex">
                   <ComputerDesktopIcon
-                    className="mr-3 h-5 w-fit text-gray-400"
+                    className="mr-3 h-5 w-auto text-gray-400"
                     aria-hidden="true"
                   />
                   System

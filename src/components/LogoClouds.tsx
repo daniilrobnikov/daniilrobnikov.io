@@ -41,7 +41,7 @@ const frontendTools = [
           <path d="M5 4.15h22.5l-2 20.5-9.25 4-9.25-4-2-20.5Z"></path>
           <path d="M20.5 9.15H12v5.5h8.5v6l-4.25 2-4.25-2v-2.5"></path>
         </svg>
-        <span className="ml-2 text-2xl">HTML</span>
+        <span className="ml-2 whitespace-nowrap text-2xl">HTML</span>
       </>
     ),
   },
@@ -62,7 +62,9 @@ const frontendTools = [
             <ellipse rx="11" ry="4.2" transform="rotate(120)" />
           </g>
         </svg>
-        <span className="text-6 ml-2 text-2xl font-bold">React</span>
+        <span className="text-6 ml-2 whitespace-nowrap text-2xl font-bold">
+          React
+        </span>
       </>
     ),
   },
@@ -84,7 +86,7 @@ const frontendTools = [
             fillRule="evenodd"
           ></path>
         </svg>
-        <span className="ml-2 text-2xl">TypeScript</span>
+        <span className="ml-2 whitespace-nowrap text-2xl">TypeScript</span>
       </>
     ),
   },
@@ -110,7 +112,7 @@ const frontendTools = [
             d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"
           />
         </svg>
-        <span className="ml-2 text-2xl">CSS</span>
+        <span className="ml-2 whitespace-nowrap text-2xl">CSS</span>
       </>
     ),
   },
@@ -163,7 +165,7 @@ const frontendTools = [
             d="M26.019,11c11.429,7.698,7.732,16.187,7.732,16.187s3.25,3.634,1.936,6.813c0,0-1.34-2.226-3.588-2.226c-2.166,0-3.44,2.226-7.8,2.226C14.591,34,10,25.967,10,25.967c8.747,5.7,14.719,1.663,14.719,1.663C20.778,25.364,12,14,12,14c7.299,6.155,11,8,11,8c-1.882-1.542-8-9-8-9c4.224,4.238,13.307,10.378,13.307,10.378C30.691,16.834,26.019,11,26.019,11z"
           />
         </svg>
-        <span className="ml-3 text-2xl">Swift</span>
+        <span className="ml-3 whitespace-nowrap text-2xl">Swift</span>
       </>
     ),
   },
@@ -180,7 +182,9 @@ const frontendTools = [
         >
           <path d="M0 0h14v7H7zm0 7h7l7 7H7v7l-7-7z" fill="currentColor"></path>
         </svg>
-        <span className="ml-4 truncate text-2xl font-bold">Framer Motion</span>
+        <span className="ml-4 whitespace-nowrap text-2xl font-bold">
+          Framer Motion
+        </span>
       </>
     ),
   },
@@ -198,7 +202,7 @@ const frontendTools = [
             <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"></path>
           </g>
         </svg>
-        <span className="ml-4 truncate text-2xl font-bold">Figma</span>
+        <span className="ml-4 whitespace-nowrap text-2xl font-bold">Figma</span>
       </>
     ),
   },
@@ -278,7 +282,7 @@ const frontendTools = [
             d="M30,98V30h20l20,25l20-25h20v68H90V59L70,84L50,59v39H30z M155,98l-30-33h20V30h20v35h20L155,98z"
           />
         </svg>
-        <span className="ml-2 text-xl">Markdown</span>
+        <span className="ml-2 whitespace-nowrap text-xl">Markdown</span>
       </>
     ),
   },
@@ -347,7 +351,7 @@ const backendTools = [
             <path d="M32.4 67.1c.1 3 2.6 5.4 5.6 5.4h.2c3.1-.1 5.5-2.7 5.4-5.8-.1-3-2.6-5.4-5.6-5.4h-.2c-.2 0-.5 0-.7.1-4.1-6.8-5.8-14.2-5.2-22.2.4-6 2.4-11.2 5.9-15.5 2.9-3.7 8.5-5.5 12.3-5.6 10.6-.2 15.1 13 15.4 18.3 1.3.3 3.5 1 5 1.5-1.2-16.2-11.2-24.6-20.8-24.6-9 0-17.3 6.5-20.6 16.1-4.6 12.8-1.6 25.1 4 34.8-.5.7-.8 1.8-.7 2.9z" />
           </g>
         </svg>
-        <span className="ml-2 text-2xl">Redux</span>
+        <span className="ml-2 whitespace-nowrap text-2xl">Redux</span>
       </>
     ),
   },
@@ -441,7 +445,7 @@ const backendTools = [
           <circle cx="14.7659" cy="70.3396" r="8.82" />
           <circle cx="14.7659" cy="29.6605" r="8.82" />
         </svg>
-        <span className="ml-2 text-xl">GraphQL</span>
+        <span className="ml-2 whitespace-nowrap text-xl">GraphQL</span>
       </>
     ),
   },
@@ -546,7 +550,7 @@ const backendTools = [
             <path strokeWidth={3} d="M0,60.232" />
           </g>
         </svg>
-        <span className="ml-2 text-xl">PostgreSQL</span>
+        <span className="ml-2 whitespace-nowrap text-xl">PostgreSQL</span>
       </>
     ),
   },
@@ -615,7 +619,9 @@ const backendTools = [
             fill="currentColor"
           ></path>
         </svg>
-        <span className="ml-3 text-2xl font-bold">GitHub</span>
+        <span className="ml-3 whitespace-nowrap text-2xl font-bold">
+          GitHub
+        </span>
       </>
     ),
   },
@@ -649,9 +655,9 @@ export default function LogoClouds() {
           </Balancer>
         </h2>
         <div className="relative mt-12 h-8 overflow-x-clip">
-          <div className="absolute flow-root w-fit">
+          <div className="absolute flow-root w-auto">
             <div className={styles.slide}>
-              <ul className="flex h-8 w-fit flex-nowrap justify-start gap-16 text-gray-400">
+              <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
                 {frontendTools.map((item) => (
                   <li key={item.name}>
                     <Link
@@ -661,7 +667,7 @@ export default function LogoClouds() {
                       rel="noreferrer"
                     >
                       <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-full w-fit" aria-hidden="true" />
+                      <item.icon className="h-8 w-auto" aria-hidden="true" />
                     </Link>
                   </li>
                 ))}
@@ -675,9 +681,9 @@ export default function LogoClouds() {
           />
         </div>
         <div className="relative mt-12 h-8 overflow-x-clip">
-          <div className="absolute flow-root w-fit">
+          <div className="absolute flow-root w-auto">
             <div className={styles.slide}>
-              <ul className="flex h-8 w-fit flex-nowrap justify-start gap-16 text-gray-400">
+              <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
                 {backendTools.map((item) => (
                   <li key={item.name}>
                     <Link
@@ -687,7 +693,7 @@ export default function LogoClouds() {
                       rel="noreferrer"
                     >
                       <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-full w-fit" aria-hidden="true" />
+                      <item.icon className="h-8 w-auto" aria-hidden="true" />
                     </Link>
                   </li>
                 ))}

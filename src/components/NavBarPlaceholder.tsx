@@ -52,7 +52,7 @@ export default function NavBarPlaceholder() {
                   >
                     <span className="dark:hidden">
                       <SunIcon
-                        className="h-5 w-fit"
+                        className="h-5 w-auto"
                         strokeWidth="2.25"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -60,7 +60,7 @@ export default function NavBarPlaceholder() {
                     </span>
                     <span className="hidden dark:inline">
                       <MoonIcon
-                        className="h-5 w-fit"
+                        className="h-5 w-auto"
                         strokeWidth="2.25"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -79,7 +79,7 @@ export default function NavBarPlaceholder() {
                       className="relative rounded-md bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-lg ring-1 ring-slate-900/10 hover:bg-slate-50 hover:text-black dark:bg-slate-800 dark:text-slate-400  dark:ring-0 dark:hover:bg-slate-700 dark:hover:text-white"
                     >
                       <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-6 w-fit" aria-hidden="true" />
+                      <item.icon className="h-6 w-auto" aria-hidden="true" />
                       <Link
                         href={item.href}
                         target="_blank"
