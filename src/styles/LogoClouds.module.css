@@ -23,13 +23,9 @@
 
 @keyframes slide {
   0% {
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    transform: translateX(0px);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-webkit-calc(64px - 100% + 100vw));
-    -moz-transform: translateX(-moz-calc(64px - 100% + 100vw));
-    transform: translateX(calc(64px - 100% + 100vw));
+    transform: translateX(calc(64px - 100%));
   }
 }
