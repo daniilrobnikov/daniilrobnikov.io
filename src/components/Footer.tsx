@@ -3,7 +3,7 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon, ChevronUpDownIcon } from "@heroicons/react/24/solid";
+import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
 import dynamic from "next/dynamic";
 import { useState, type HTMLAttributes } from "react";
 const ThemeSelection = dynamic(() => import("./ThemeSelection"), {
