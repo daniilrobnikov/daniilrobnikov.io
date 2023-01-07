@@ -1,12 +1,13 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Documentation", href: "/scroll", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "About", href: "/about", current: false },
+  { name: "Home", href: "/" },
+  { name: "Documentation", href: "/scroll" },
+  { name: "Projects", href: "#" },
+  { name: "About", href: "/about" },
 ];
 
 function classNames(...classes: string[]) {
@@ -14,6 +15,8 @@ function classNames(...classes: string[]) {
 }
 
 export default function NavBar() {
+  const router = useRouter();
+
   return (
     <>
       <Disclosure
@@ -25,7 +28,7 @@ export default function NavBar() {
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
+                  {/* Mobile menu button */}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -43,12 +46,14 @@ export default function NavBar() {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current
+                            item.href === router.pathname
                               ? "bg-gray-200 text-black dark:bg-gray-900 dark:text-white"
                               : "text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
                             "rounded-md px-3 py-2 text-sm font-medium",
                           )}
-                          aria-current={item.current ? "page" : undefined}
+                          aria-current={
+                            item.href === router.pathname ? "page" : undefined
+                          }
                         >
                           {item.name}
                         </a>
@@ -67,12 +72,14 @@ export default function NavBar() {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current
+                        item.href === router.pathname
                           ? "bg-gray-200 text-black dark:bg-gray-900 dark:text-white"
                           : "text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
                         "block rounded-md px-3 py-2 text-base font-medium",
                       )}
-                      aria-current={item.current ? "page" : undefined}
+                      aria-current={
+                        item.href === router.pathname ? "page" : undefined
+                      }
                     >
                       {item.name}
                     </Disclosure.Button>
@@ -83,7 +90,7 @@ export default function NavBar() {
           </>
         )}
       </Disclosure>
-      <div className="h-16" />
+      {/* <div className="h-16" /> */}
     </>
   );
 }

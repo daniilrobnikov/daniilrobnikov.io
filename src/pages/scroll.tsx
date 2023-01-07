@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import SideBar from "../components/SideBar";
+import Footer from "@/ui/Footer";
+import NavBar from "@/ui/NavBar";
+import SideBar from "@/ui/SideBar";
 
 export default function ScrollPage() {
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useState, type ChangeEvent } from "react";
+import { useEffect, useState } from "react";
 
 export default function useTheme() {
   const [theme, setTheme] = useState("system");
@@ -12,8 +12,7 @@ export default function useTheme() {
     }
   }, []);
 
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const { value } = e.target;
+  const selectTheme = (value: string) => {
     setTheme(value);
 
     if (value === "dark") {
@@ -32,7 +31,12 @@ export default function useTheme() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    if (value === "system") {
+      document.documentElement.classList.add("system");
+    } else {
+      document.documentElement.classList.remove("system");
+    }
   };
 
-  return { theme, handleChange };
+  return { theme, selectTheme };
 }

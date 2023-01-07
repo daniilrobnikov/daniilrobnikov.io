@@ -1,12 +1,14 @@
-import About from "../components/About";
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import About from "@/ui/About";
+import Footer from "@/ui/Footer";
+import LogoClouds from "@/ui/LogoClouds";
+import NavBar from "@/ui/NavBar";
 
 export default function ScrollPage() {
   return (
     <>
       <NavBar />
       <About />
+      <LogoClouds />
       <Footer />
     </>
   );

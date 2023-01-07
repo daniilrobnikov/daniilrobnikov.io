@@ -1,7 +1,7 @@
+import Footer from "@/ui/Footer";
+import LogoClouds from "@/ui/LogoClouds";
+import NavBar from "@/ui/NavBar";
 import React from "react";
-import Footer from "../components/Footer";
-import LogoClouds from "../components/LogoClouds";
-import NavBar from "../components/NavBar";
 
 const Frontend = () => {
   return (

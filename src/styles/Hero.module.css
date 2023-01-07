@@ -1,0 +1,33 @@
+#hero > span {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#hero > div {
+  background-image: linear-gradient(
+      110deg,
+      transparent 41%,
+      currentColor 49%,
+      currentColor 51%,
+      transparent 59%
+    ),
+    radial-gradient(currentColor 1%, transparent 20%);
+  background-size: 300% 300%, 300% 600%;
+  animation-direction: normal;
+  animation: slide 8s cubic-bezier(0.001, 0, 0.999, 1) infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 100% 50%, 100% 50%;
+  }
+  35% {
+    background-position: 60% 50%, 60% 50%;
+  }
+  65% {
+    background-position: 40% 50%, 40% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 0% 50%;
+  }
+}
