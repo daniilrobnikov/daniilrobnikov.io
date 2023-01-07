@@ -1,7 +1,7 @@
-import styles from "@/styles/LogoClouds.module.css";
 import Link from "next/link";
 import { type HTMLAttributes } from "react";
 import Balancer from "react-wrap-balancer";
+import styles from "../styles/LogoClouds.module.css";
 
 const frontendTools = [
   {
