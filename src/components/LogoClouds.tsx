@@ -656,7 +656,7 @@ export default function LogoClouds() {
         </h2>
         <div className="relative mt-12 h-8 overflow-x-clip">
           <div className="absolute flow-root w-auto">
-            <div className={styles.slide}>
+            <div className={styles.slide_upper}>
               <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
                 {frontendTools.map((item) => (
                   <li key={item.name}>
@@ -682,7 +682,7 @@ export default function LogoClouds() {
         </div>
         <div className="relative mt-12 h-8 overflow-x-clip">
           <div className="absolute flow-root w-auto">
-            <div className={styles.slide}>
+            <div className={styles.slide_lower}>
               <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
                 {backendTools.map((item) => (
                   <li key={item.name}>

@@ -8,7 +8,8 @@
   );
 }
 
-.slide {
+.slide_upper,
+.slide_lower {
   @apply mx-0 flex w-[calc(100%+32px)] sm:w-[calc(100%+48px)] lg:w-[calc(100%+64px)];
   animation: slide 50s linear infinite;
   animation-direction: normal;
@@ -16,9 +17,11 @@
 
 @keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0px);
   }
   100% {
-    transform: translateX(calc(-100% + 100vw + 64px));
+    transform: translateX(-webkit-calc(64px - 100% + 100vw));
+    transform: translateX(-moz-calc(64px - 100% + 100vw));
+    transform: translateX(calc(64px - 100% + 100vw));
   }
 }
