@@ -3,9 +3,12 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
-import { type HTMLAttributes } from "react";
-import useTheme from "../hooks/useTheme";
+import { ChevronDownIcon, ChevronUpDownIcon } from "@heroicons/react/24/solid";
+import dynamic from "next/dynamic";
+import { useState, type HTMLAttributes } from "react";
+const ThemeSelection = dynamic(() => import("./ThemeSelection"), {
+  ssr: false,
+});
 
 const navigation = {
   social: [
@@ -68,17 +71,21 @@ const navigation = {
 };
 
 export default function Footer() {
-  const { theme, handleChange } = useTheme();
+  const [selectionOpen, setSelectionOpen] = useState(false);
+
+  const handleClick = () => {
+    setSelectionOpen(!selectionOpen);
+  };
 
   return (
     <footer className="bg-white dark:bg-black" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:pt-16 lg:pb-20">
         <div className="mt-8 flex flex-col items-center gap-4 border-t border-gray-200 pt-8 dark:border-gray-800 md:flex-row md:justify-between">
           <p className="order-3 mt-0 text-center text-base text-gray-500 md:order-1 md:text-left">
-            Copyright &copy; 2022 Daniil Robnikov. All rights reserved.
+            Copyright &copy; 2023 Daniil Robnikov. All rights reserved.
           </p>
           <div className="order-2 flex space-x-6">
             {navigation.social.map((item) => (
@@ -99,37 +106,44 @@ export default function Footer() {
               Theme
             </label>
             <div className="relative inline-flex items-center">
-              {theme === "dark" ? (
-                <MoonIcon
-                  className="theme-dark pointer-events-none absolute left-0 ml-3 h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              ) : theme === "light" ? (
-                <SunIcon
-                  className="pointer-events-none absolute left-0 ml-3 h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              ) : (
-                <ComputerDesktopIcon
-                  className="pointer-events-none absolute left-0 ml-3 h-5 w-5 text-gray-400"
-                  aria-hidden="true"
+              {selectionOpen && (
+                <ThemeSelection
+                  className="right-0 group-[:not(.dark):not(.system)]/html:-top-1 group-[.system]/html:-bottom-1 group-[.dark:not(.system)]/html:-bottom-10"
+                  setSelectionOpen={setSelectionOpen}
                 />
               )}
-              <select
+              <button
                 id="theme"
                 name="theme"
-                className="appearance-none rounded-md border border-gray-300 bg-white bg-none py-2 px-10 text-base text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-700 dark:bg-black dark:text-gray-100 sm:text-sm"
-                value={theme}
-                onChange={(e) => handleChange(e)}
+                className="inline-flex w-36 items-center justify-between rounded-md border border-gray-300 bg-white bg-none py-2 px-3 text-sm text-black focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-700 dark:bg-black dark:text-white"
+                onClick={() => handleClick()}
               >
-                <option value="dark">Dark</option>
-                <option value="light">Light</option>
-                <option value="system">System</option>
-              </select>
-              <ChevronUpDownIcon
-                className="pointer-events-none absolute right-0 mr-3 h-5 w-5 text-gray-400"
-                aria-hidden="true"
-              />
+                <p className="pointer-events-none flex h-5 w-fit items-center group-[.system]/html:hidden group-[.dark]/html:hidden">
+                  <SunIcon
+                    className="mr-3 h-5 w-fit text-gray-400"
+                    aria-hidden="true"
+                  />
+                  Light
+                </p>
+                <p className="pointer-events-none hidden h-5 w-fit items-center group-[.dark:not(.system)]/html:flex">
+                  <MoonIcon
+                    aria-hidden="true"
+                    className="mr-3 h-5 w-fit text-gray-400"
+                  />
+                  Dark
+                </p>
+                <p className="pointer-events-none hidden h-5 w-fit items-center group-[.system]/html:flex">
+                  <ComputerDesktopIcon
+                    className="mr-3 h-5 w-fit text-gray-400"
+                    aria-hidden="true"
+                  />
+                  System
+                </p>
+                <ChevronUpDownIcon
+                  className="pointer-events-none h-5 w-5 text-gray-400"
+                  aria-hidden="true"
+                />
+              </button>
             </div>
           </fieldset>
         </div>

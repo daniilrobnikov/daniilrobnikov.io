@@ -4,7 +4,7 @@ import Balancer from "react-wrap-balancer";
 export default function About() {
   return (
     <div className="bg-white pt-16 dark:bg-black lg:py-24">
-      <div className="bg-gray-600 pb-16 lg:relative lg:z-10 lg:pb-0">
+      <div className="bg-gray-600 pb-16 dark:bg-gray-800 lg:relative lg:z-10 lg:pb-0">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
           <div className="relative lg:-my-8">
             <div
@@ -16,7 +16,7 @@ export default function About() {
                 <Image
                   className="object-cover lg:h-full lg:w-full"
                   src="/PhotoID.jpg"
-                  alt=""
+                  alt="Photo of Daniil Robnikov"
                   width={1000}
                   height={600}
                 />
@@ -47,8 +47,8 @@ export default function About() {
                   <p className="text-base font-medium text-white">
                     Daniil Robnikov{" "}
                   </p>
-                  <p className="text-base font-medium text-blue-100">
-                    Full-Stack Web Developer{" "}
+                  <p className="text-base font-medium text-teal-200/80">
+                    Full-Stack Web Developer
                   </p>
                 </footer>
               </blockquote>

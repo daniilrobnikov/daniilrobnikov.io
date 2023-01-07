@@ -1,9 +1,11 @@
+import About from "@/ui/About";
+import Contact from "@/ui/Contact";
+import Footer from "@/ui/Footer";
+import Hero from "@/ui/Hero";
+import LogoClouds from "@/ui/LogoClouds";
+import NavBarPlaceholder from "@/ui/NavBarPlaceholder";
 import { type NextPage } from "next";
 import Head from "next/head";
-import About from "../components/About";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
 
 const Home: NextPage = () => {
   return (
@@ -15,9 +17,11 @@ const Home: NextPage = () => {
           name="description"
         />
       </Head>
+      <NavBarPlaceholder />
       <Hero />
       <About />
       <Contact />
+      <LogoClouds />
       <Footer />
     </>
   );

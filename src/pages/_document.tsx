@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export default function Document() {
   return (
-    <Html className="bg-[#4B5563]">
+    <Html className="group/html bg-[#4B5563]">
       <Head>
         <link
           rel="apple-touch-icon"
@@ -62,6 +62,9 @@ export default function Document() {
                   .setAttribute("content", "#1F2937");
               } else {
                 document.documentElement.classList.remove("dark");
+              }
+              if (!("theme" in localStorage)) {
+                document.documentElement.classList.add("system");
               }
             } catch (_) {}
             `,

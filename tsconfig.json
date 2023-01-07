@@ -14,16 +14,30 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    // Add undefined to any un-declared field in the type.
+    // F.e. string | undefined
+    // @TODO: Check if this is needed.
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/ui/*": ["src/components/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/styles/*": ["src/styles/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
+    "./.eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "src/pages/api/contact.ts",
-    "src/config/nodemailer.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

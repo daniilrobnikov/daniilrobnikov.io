@@ -1,6 +1,7 @@
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import Balancer from "react-wrap-balancer";
 import { sendContactForm } from "../config/nodemailer";
 
@@ -16,7 +17,16 @@ const initValues = {
 export default function Contact() {
   const [values, setValues] = useState(initValues);
   const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (success) {
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
+    }
+  }, [success]);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
@@ -39,6 +49,7 @@ export default function Contact() {
     if (res.status !== 200) setError(res.error);
     if (res.success) {
       setValues(initValues);
+      setSuccess(true);
       setError("");
     }
     setIsLoading(false);
@@ -67,7 +78,7 @@ export default function Contact() {
               >
                 Let&apos;s work together
               </h2>
-              <p className="mt-4 text-lg text-gray-500 sm:mt-3">
+              <p className="mt-4 text-lg text-gray-600 sm:mt-3 dark:lg:text-gray-400">
                 <Balancer>
                   I&apos;d love to hear from you! Send me a message using the
                   form below, or email.
@@ -195,7 +206,7 @@ export default function Contact() {
                     </label>
                     <span
                       id="subject-description"
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-600 dark:lg:text-gray-400"
                     >
                       Optional
                     </span>
@@ -205,7 +216,6 @@ export default function Contact() {
                       type="text"
                       name="subject"
                       id="subject"
-                      autoComplete="tel"
                       aria-describedby="subject-description"
                       value={values.subject}
                       onChange={handleChange}
@@ -231,8 +241,8 @@ export default function Contact() {
                       id="how-can-we-help-description"
                       className={`text-sm ${
                         error && values.message.trim().length > 500
-                          ? "text-red-500"
-                          : "text-gray-500"
+                          ? "text-red-700 dark:lg:text-red-400"
+                          : "text-gray-600 dark:lg:text-gray-400"
                       }`}
                     >
                       Max. 500 characters
@@ -257,10 +267,25 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  {error && (
+                  {error ? (
                     <div className="inline-flex w-full items-center rounded-md border border-transparent bg-red-200 px-4 py-2 text-sm font-medium text-red-600 shadow-sm">
+                      <div className="mr-2 flex-shrink-0">
+                        <XCircleIcon className="h-6 w-6" aria-hidden="true" />
+                      </div>
                       {error}
                     </div>
+                  ) : (
+                    success && (
+                      <div className="inline-flex w-full items-center rounded-md border border-transparent bg-green-200 px-4 py-2 text-sm font-medium text-teal-600 shadow-sm">
+                        <div className="mr-2 flex-shrink-0">
+                          <CheckCircleIcon
+                            className="h-6 w-6"
+                            aria-hidden="true"
+                          />
+                        </div>
+                        Successfully sent!
+                      </div>
+                    )
                   )}
                 </div>
                 <div>
