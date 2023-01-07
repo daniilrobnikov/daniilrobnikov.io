@@ -641,9 +641,7 @@ const backendTools = [
 
 export default function LogoClouds() {
   return (
-    <div
-      className={`${styles.parent ?? ""} bg-white pt-16 dark:bg-black lg:pt-24`}
-    >
+    <div className="bg-white pt-16 dark:bg-black lg:pt-24">
       <div className="mx-auto max-w-7xl bg-gray-50 py-16 px-4 dark:bg-gray-800 sm:py-20 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold dark:text-white">
           <Balancer>
@@ -652,11 +650,7 @@ export default function LogoClouds() {
         </h2>
         <div className="relative mt-12 h-8 overflow-x-clip">
           <div className="absolute flow-root w-fit">
-            <div
-              className={`${
-                styles.slide ?? ""
-              } mx-0 flex w-[calc(100%+32px)] sm:w-[calc(100%+48px)] lg:w-[calc(100%+64px)]`}
-            >
+            <div className={styles.slide}>
               <ul className="flex h-8 w-fit flex-nowrap justify-start gap-16 text-gray-400">
                 {frontendTools.map((item) => (
                   <li key={item.name}>
@@ -682,11 +676,7 @@ export default function LogoClouds() {
         </div>
         <div className="relative mt-12 h-8 overflow-x-clip">
           <div className="absolute flow-root w-fit">
-            <div
-              className={`${
-                styles.slide ?? ""
-              } mx-0 flex w-[calc(100%+32px)] sm:w-[calc(100%+48px)] lg:w-[calc(100%+64px)]`}
-            >
+            <div className={styles.slide}>
               <ul className="flex h-8 w-fit flex-nowrap justify-start gap-16 text-gray-400">
                 {backendTools.map((item) => (
                   <li key={item.name}>
