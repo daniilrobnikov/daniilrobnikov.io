@@ -641,7 +641,9 @@ const backendTools = [
 
 export default function LogoClouds() {
   return (
-    <div className="bg-white pt-16 dark:bg-black lg:pt-24">
+    <div
+      className={`${styles.parent ?? ""} bg-white pt-16 dark:bg-black lg:pt-24`}
+    >
       <div className="mx-auto max-w-7xl bg-gray-50 py-16 px-4 dark:bg-gray-800 sm:py-20 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold dark:text-white">
           <Balancer>
