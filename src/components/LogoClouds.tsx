@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { type HTMLAttributes } from "react";
 import Balancer from "react-wrap-balancer";
-import styles from "../styles/LogoClouds.module.css";
 
 const frontendTools = [
   {
@@ -653,57 +652,56 @@ export default function LogoClouds() {
             Build sites with the world&apos;s most innovative tools
           </Balancer>
         </h2>
-        <div className="relative mt-12 h-8 overflow-x-clip">
-          <div className="absolute flow-root w-auto">
-            <div className={styles.slide}>
-              <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
-                {frontendTools.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="relative flex h-full items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-8 w-auto" aria-hidden="true" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        <div className="relative">
+          <div className="relative mt-12 h-8 overflow-x-clip">
+            <div className="absolute flow-root w-auto">
+              <div className="mx-0 flex w-[calc(100%+64px)] animate-slide">
+                <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
+                  {frontendTools.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="relative flex h-full items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span className="sr-only">{item.name}</span>
+                        <item.icon className="h-8 w-auto" aria-hidden="true" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-          <div
-            className={`${
-              styles.gradient ?? ""
-            } pointer-events-none absolute top-0 bottom-0 my-auto h-[150%] w-full text-gray-50 dark:text-gray-800`}
-          />
-        </div>
-        <div className="relative mt-12 h-8 overflow-x-clip">
-          <div className="absolute flow-root w-auto">
-            <div className={styles.slide}>
-              <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
-                {backendTools.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="relative flex h-full items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-8 w-auto" aria-hidden="true" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          <div className="relative mt-12 h-8 overflow-x-clip">
+            <div className="absolute flow-root w-auto">
+              <div className="mx-0 flex w-[calc(100%+64px)] animate-slide">
+                <ul className="flex h-8 w-auto flex-nowrap justify-start gap-16 text-gray-400">
+                  {backendTools.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="relative flex h-full items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span className="sr-only">{item.name}</span>
+                        <item.icon className="h-8 w-auto" aria-hidden="true" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-          <div
-            className={`${
+            {/* <div
+            className={`pointer-events-none absolute top-0 bottom-0 my-auto h-[150%] w-full text-gray-50 dark:text-gray-800 ${
               styles.gradient ?? ""
-            } pointer-events-none absolute top-0 bottom-0 my-auto h-[150%] w-full text-gray-50 dark:text-gray-800`}
-          />
+            }`}
+          /> */}
+          </div>
+          <div className="pointer-events-none absolute top-[50%] left-0 h-[150%] w-[15%] translate-y-[-50%] bg-gradient-to-r from-gray-50 via-gray-50/75 text-gray-50 dark:from-gray-800 dark:via-gray-800/75 dark:text-gray-800" />
+          <div className="pointer-events-none absolute top-[50%] right-0 h-[150%] w-[15%] translate-y-[-50%] bg-gradient-to-l from-gray-50 via-gray-50/75 text-gray-50 dark:from-gray-800 dark:via-gray-800/75 dark:text-gray-800" />
         </div>
       </div>
     </div>
