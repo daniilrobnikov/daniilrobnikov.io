@@ -8,16 +8,11 @@
   );
 }
 
-.slide_upper,
-.slide_lower {
+.slide {
   @apply mx-0 flex;
-  /* w-[calc(100%+32px)] sm:w-[calc(100%+48px)] lg:w-[calc(100%+64px)]
-  width: -webkit-calc(100% + 64px);
-  width: -moz-calc(100% + 64px);
   width: calc(100% + 64px);
-  */
   width: 100%;
-  animation: slide 50s linear infinite;
+  animation: slide 60s linear infinite;
   animation-direction: normal;
 }
 
@@ -26,6 +21,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(64px - 100%));
+    transform: translateX(calc(64px - 100% + 100vw));
   }
 }
